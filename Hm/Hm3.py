@@ -1,6 +1,7 @@
 import random
+from abc import ABC, abstractmethod
 
-class Hero:
+class Hero(ABC):
     def __init__(self, name, lvl, hp, strength):
         self.name = name
         self.lvl = lvl
@@ -9,10 +10,10 @@ class Hero:
 
     def greet(self):
         print(f"Привет, я {self.name}, мой уровень {self.lvl}")
-
+    @abstractmethod
+    
     def attack(self):
-        print(f"{self.name} наносит удар!")
-        self.strength -= 1
+        pass
 
     def rest(self):
         print(f"{self.name} отдыхает...")
@@ -44,7 +45,6 @@ class Assassin(Hero):
 
     def attack(self):
         print(f"{self.name}: Ассасин атакует из-под тишка!")
-
 
 warrior = Warrior("Воин", 10, 1000, 275, 300)
 mage = Mage("Маг", 8, 950, 350, 200)
@@ -80,7 +80,6 @@ if choice not in heroes:
     print("Неверный выбор героя!")
 else:
     player = heroes[choice]
-
     enemy = random.choice(list(heroes.values()))
 
     print(f"\nВы выбрали: {player.name}")
@@ -88,15 +87,11 @@ else:
 
     if player == enemy:
         print("Ничья!")
-
     elif isinstance(player, Warrior) and isinstance(enemy, Assassin):
         print("Warrior победил!")
-
     elif isinstance(player, Assassin) and isinstance(enemy, Mage):
         print("Assassin победил!")
-
     elif isinstance(player, Mage) and isinstance(enemy, Warrior):
         print("Mage победил!")
-
     else:
         print(f"{enemy.name} победил!")
