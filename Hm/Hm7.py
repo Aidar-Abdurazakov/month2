@@ -3,7 +3,6 @@ import sqlite3
 db = sqlite3.connect("store.db")
 cursor = db.cursor()
 
-# Создание таблицы
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS products(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
