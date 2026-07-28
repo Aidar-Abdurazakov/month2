@@ -59,7 +59,8 @@ test_obj = OldClass()
 test_obj.action()
 print(type(test_obj))
 
-from colorama import Fore, Style
 
-print(Fore.RED + "Ошибка!" + Style.RESET_ALL)
-print("Обычный текст")
+
+
+
+

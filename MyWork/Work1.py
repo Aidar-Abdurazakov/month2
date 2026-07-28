@@ -10,10 +10,10 @@ c = db.cursor()
 #     avtor TEXT                  
 # )""")
 
-c.execute(
-    "INSERT INTO articles VALUES (?, ?, ?, ?)",
-    ('FACEBOOK is cool', 'FACEBOOK is realy cool', 500, 'AIDAR')
-)
+# c.execute(
+#     "INSERT INTO articles VALUES (?, ?, ?, ?)",
+#     ('FACEBOOK is cool', 'FACEBOOK is realy cool', 500, 'AIDAR')
+# )
 
 c.execute("SELECT rowid, * FROM articles")
 
@@ -24,5 +24,9 @@ c.execute("SELECT rowid, * FROM articles")
 print(c.fetchall())
 for el in items:
     print(el[1] + "/n" + el[4])
+
+
+
+    
 db.commit()
 db.close()

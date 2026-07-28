@@ -22,7 +22,7 @@ hero2 = Hero("Ланселот", 3, 80, 15)
 hero1.greet()
 hero1.attack()
 hero1.rest()
-print("Воин аттакует мечом")
+
 
 print("После действий:")
 print(f"Здоровье: {hero1.health}")
