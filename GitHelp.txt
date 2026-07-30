@@ -1,0 +1,83 @@
+Команды для регистрации ваших данных
+git config --global user.name "Your name"
+git config --global user.email "your-email@example.com"
+================================================================
+
+
+Команды только для одно проекта
+
+1) Это команды для инициализации Git в вашем новом проекте,
+пишется в один раз в начале после создания проекта:
+
+git init
+
+2) Это комада будет вставить вашу ссылку на ваш репозиторий:
+
+git remote add origin https://github.com/arzy-54-2/oop68-2.git
+================================================================
+
+
+
+Основные команды для работа с Git
+
+
+1) Проверка состояния нашего проекта
+
+git status
+
+2) Скопировать в буфэр
+
+git add .
+git add dir_name
+
+3) Сохранить все что у нас в буффэре
+
+git commit -m "first lesson save"
+
+
+4) отправка сохранений в GitHub
+
+git push origin main или master
+
+5) Удаление всех изменений до коммита
+git restore .
+
+6) Удаления после git add .
+
+git reset .
+
+7) Проверка на кокой я ветке и список веток
+git branch
+
+8) Создание ветки
+git branch branch_name
+
+9) Переключение на  ветку
+git switch branch_name
+
+10) Клонинование проектов из GitHub
+git clone link_to_project
+
+
+production
+test
+        | stage
+dev
+
+feat/register
+
+-m "feat: added  register link"
+-m "fix: register logik"
+-m "HotFix: register "
+-m "update: register "
+
+# Создание вируального окружения
+py -m venv name_venv
+python -m venv name_venv
+python3 -m venv name_venv
+
+
+# Активация виртуального окружения
+source name_venv/bin/activate      для  MacOS
+name_venv\Scripts\activate     для Windows в терминале comond prompt
+source name_venv/Scripts/activate   для Windows в терминале Git Bash
